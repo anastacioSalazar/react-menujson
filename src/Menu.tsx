@@ -1,7 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import type { MenuProps } from './types';
 import { MenuItem } from './MenuItem';
-
 import './Menu.css';
 
 const DEFAULT_COLORS = [
@@ -17,8 +16,9 @@ export function Menu({
   backgroundColor,
   showToggle = true,
   className = '',
-  minItemsPerRow=1,
+  minItemsPerRow,
   maxItemWidth = 260,
+  toggleColor,
 }: MenuProps) {
   const [visible, setVisible] = useState(!showToggle);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -63,11 +63,16 @@ export function Menu({
       } as React.CSSProperties)
     : undefined;
 
+  const toggleStyle = toggleColor
+    ? ({ '--rmj-toggle-color': toggleColor } as React.CSSProperties)
+    : undefined;
+
   return (
     <>
       {showToggle && (
         <div
           className="rmj-menu-toggle"
+          style={toggleStyle}
           tabIndex={0}
           role="button"
           aria-label="Toggle menu"

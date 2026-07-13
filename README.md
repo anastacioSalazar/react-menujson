@@ -11,6 +11,14 @@ Supports **up to three menu levels** with built-in navigation, customizable styl
 
 ---
 
+## 📸 Screenshots
+
+| First-level menu | Second-level submenu | Third-level submenu |
+|:---:|:---:|:---:|
+| ![Main menu](https://res.cloudinary.com/lrtdmkhj/image/upload/v1783627260/menus_qdog01.png) | ![Submenu level 2](https://res.cloudinary.com/lrtdmkhj/image/upload/v1783627260/menu2_v1c90v.png) | ![Submenu level 3](https://res.cloudinary.com/lrtdmkhj/image/upload/v1783627260/menu_3_didrsg.png) |
+
+---
+
 ## ✨ Features
 
 - 🚀 Build menus directly from JSON
@@ -19,7 +27,7 @@ Supports **up to three menu levels** with built-in navigation, customizable styl
 - 🎯 Fixed background color support
 - 📱 Responsive layout
 - 📐 Minimum items per row configuration
-- 🔘 Optional floating toggle button
+- 🔘 Optional floating toggle button with customizable color
 - ❌ Close button for submenus
 - ⚡ Zero external dependencies
 - 🔷 Fully typed with TypeScript
@@ -145,7 +153,8 @@ interface ThirdMenuItemData {
 | showToggle | boolean | true | Shows the floating toggle button |
 | className | string | — | Additional CSS class |
 | minItemsPerRow | number | — | Minimum number of first-level items per row |
-| maxItemWidth | number | 260 | Maximum width (px) for first-level items |
+| maxItemWidth | number | 260 | Maximum width (px) for first-level items when `minItemsPerRow` is set |
+| toggleColor | string | — | Background color of the floating toggle button |
 
 ---
 
@@ -191,6 +200,17 @@ interface ThirdMenuItemData {
     data={menuData}
     minItemsPerRow={3}
     maxItemWidth={220}
+/>
+```
+
+---
+
+## Custom toggle button color
+
+```tsx
+<Menu
+    data={menuData}
+    toggleColor="#0C231E"
 />
 ```
 

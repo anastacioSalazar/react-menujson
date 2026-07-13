@@ -1,6 +1,6 @@
 {
   "name": "react-menujson",
-  "version": "0.1.1",
+  "version": "0.1.3",
   "description": "A lightweight React library for building responsive multi-level navigation menus from a simple JSON structure.",
   "type": "module",
   "main": "./dist/index.cjs",

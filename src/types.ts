@@ -45,4 +45,5 @@ export interface MenuProps {
    * grandes. Default: 260.
    */
   maxItemWidth?: number;
+   toggleColor?: string;
 }
